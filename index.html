@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoriQHome - Authentic Italian Cuisine & Culinary Traditions</title>
+    <meta name="description" content="Discover authentic Italian cuisine traditions, recipes, and culinary heritage at DecoriQHome. Experience the true flavors of Italy with our comprehensive guide to Italian cooking methods and ingredients.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        .headerNav_dq7k {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navContainer_xm2p {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logoSection_qw9r {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navMenu_kt5m {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .navMenu_kt5m a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            font-size: 14px;
+        }
+
+        .navMenu_kt5m a:hover {
+            opacity: 0.8;
+        }
+
+        .heroSection_bm4x {
+            background: linear-gradient(rgba(196, 30, 58, 0.8), rgba(139, 20, 40, 0.8)), url('https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heroTitle_vp8n {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .heroSubtitle_jk3l {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .ctaButton_rn6q {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .ctaButton_rn6q:hover {
+            background-color: #e67e22;
+        }
+
+        .contentWrapper_zx2m {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .sectionTitle_aq4p {
+            font-size: 36px;
+            color: #c41e3a;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .descriptionBlock_hy7m {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            line-height: 1.8;
+        }
+
+        .descriptionBlock_hy7m p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .gridLayout_mp9k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card_tn4x {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card_tn4x:hover {
+            transform: translateY(-5px);
+        }
+
+        .cardImage_lp2q {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .cardContent_ws3r {
+            padding: 25px;
+        }
+
+        .cardTitle_ek8m {
+            font-size: 22px;
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .cardText_jm5n {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .readMore_qp7x {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .readMore_qp7x:hover {
+            text-decoration: underline;
+        }
+
+        .historySection_vb8k {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .historyTitle_ck2m {
+            font-size: 28px;
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .historyText_jx9p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .reviewsContainer_wd4k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .reviewCard_nt7m {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-left: 4px solid #c41e3a;
+        }
+
+        .reviewAuthor_gm3k {
+            font-weight: bold;
+            color: #c41e3a;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .reviewText_ks2l {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .stars_bx4m {
+            color: #f39c12;
+            font-size: 14px;
+        }
+
+        .footerSection_qm8p {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footerContent_rx3k {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footerBlock_ym7n {
+            margin-bottom: 20px;
+        }
+
+        .footerTitle_zp5k {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+
+        .footerText_aq2m {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .footerLink_jk4m {
+            color: #f39c12;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .footerLink_jk4m:hover {
+            text-decoration: underline;
+        }
+
+        .phoneLink_dn5m {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .phoneLink_dn5m:hover {
+            text-decoration: underline;
+        }
+
+        .modal_tz9k {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+
+        .modalContent_vx3m {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .closeBtn_ky8m {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 20px;
+        }
+
+        .closeBtn_ky8m:hover {
+            color: #000;
+        }
+
+        .modalTitle_aq5m {
+            color: #c41e3a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .modalText_jm2p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .ingredientsList_ek3m {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .ingredientsList_ek3m h3 {
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .ingredientsList_ek3m ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .ingredientsList_ek3m li {
+            padding: 12px;
+            background: #f8f9fa;
+            border-left: 3px solid #c41e3a;
+            border-radius: 4px;
+        }
+
+        .techniqueBlock_qs7m {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 2px solid #c41e3a;
+        }
+
+        .techniqueBlock_qs7m h3 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .techniqueBlock_qs7m p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .regionCard_hn4m {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-top: 4px solid #c41e3a;
+        }
+
+        .regionCard_hn4m h4 {
+            color: #c41e3a;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .regionCard_hn4m p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .featureBox_ld9m {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .featureBox_ld9m h4 {
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .featureBox_ld9m p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .navMenu_kt5m {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .heroTitle_vp8n {
+                font-size: 32px;
+            }
+
+            .heroSubtitle_jk3l {
+                font-size: 18px;
+            }
+
+            .sectionTitle_aq4p {
+                font-size: 28px;
+            }
+
+            .navContainer_xm2p {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="headerNav_dq7k">
+        <div class="navContainer_xm2p">
+            <a href="#home" class="logoSection_qw9r">🍝 DecoriQHome</a>
+            <nav>
+                <ul class="navMenu_kt5m">
+                    <li><a href="#traditions">Traditions</a></li>
+                    <li><a href="#regions">Regions</a></li>
+                    <li><a href="#techniques">Techniques</a></li>
+                    <li><a href="#ingredients">Ingredients</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="heroSection_bm4x" id="home">
+        <h1 class="heroTitle_vp8n">Discover Authentic Italian Culinary Heritage</h1>
+        <p class="heroSubtitle_jk3l">Experience the true essence of Italian cooking traditions passed down through generations</p>
+        <button class="ctaButton_rn6q" onclick="document.getElementById('traditionsSection').scrollIntoView({behavior: 'smooth'})">Explore Our Collection</button>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <div class="contentWrapper_zx2m">
+
+        <!-- Introduction Section -->
+        <section class="descriptionBlock_hy7m" id="traditions">
+            <h2 class="sectionTitle_aq4p">Welcome to DecoriQHome Italian Cuisine</h2>
+            <p>The art of Italian cooking represents centuries of cultural evolution, regional diversity, and family traditions that have shaped one of the world's most beloved culinary traditions. At DecoriQHome, we celebrate the authentic methods, time-honored recipes, and genuine ingredients that define Italian gastronomy. Our mission is to provide comprehensive insights into the techniques, regional variations, and historical significance of Italian cuisine. Whether you are interested in understanding the fundamentals of pasta preparation, exploring regional specialties, or learning about traditional cooking methods, our platform offers extensive resources. <a href="#" class="readMore_qp7x" onclick="openModal('modal1'); return false;">Click here to continue</a> reading about our culinary philosophy and approach to preserving authentic Italian traditions.</p>
+        </section>
+
+        <!-- Featured Traditions Grid -->
+        <section id="traditionsSection">
+            <h2 class="sectionTitle_aq4p">Italian Culinary Traditions</h2>
+            <div class="gridLayout_mp9k">
+                <div class="card_tn4x">
+                    <img src="https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pasta Making Tradition" class="cardImage_lp2q">
+                    <div class="cardContent_ws3r">
+                        <h3 class="cardTitle_ek8m">Pasta Preparation Methods</h3>
+                        <p class="cardText_jm5n">Discover the intricate processes of traditional pasta making, from selecting the finest durum wheat to hand-rolling and shaping techniques that have been perfected over centuries. The art of pasta creation involves understanding gluten development, hydration ratios, and the precise timing required for optimal texture and flavor development.</p>
+                        <a href="#" class="readMore_qp7x" onclick="openModal('modal2'); return false;">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card_tn4x">
+                    <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Risotto Cooking" class="cardImage_lp2q">
+                    <div class="cardContent_ws3r">
+                        <h3 class="cardTitle_ek8m">Risotto & Rice Traditions</h3>
+                        <p class="cardText_jm5n">Explore the sophisticated art of risotto preparation, a cornerstone of Northern Italian cuisine. This technique requires constant attention, precise temperature control, and the gradual incorporation of broth to achieve the characteristic creamy consistency. Learn about different rice varieties and their specific applications in traditional recipes.</p>
+                        <a href="#" class="readMore_qp7x" onclick="openModal('modal3'); return false;">Discover More</a>
+                    </div>
+                </div>
+
+                <div class="card_tn4x">
+                    <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sauce Preparation" class="cardImage_lp2q">
+                    <div class="cardContent_ws3r">
+                        <h3 class="cardTitle_ek8m">Traditional Sauce Crafting</h3>
+                        <p class="cardText_jm5n">Understand the fundamental principles of creating authentic Italian sauces, from simple tomato-based preparations to complex meat ragùs that simmer for hours. Each sauce carries regional significance and specific flavor profiles that complement particular pasta shapes and dishes throughout Italy.</p>
+                        <a href="#" class="readMore_qp7x" onclick="openModal('modal4'); return false;">Explore Sauces</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Specialties Section -->
+        <section id="regions">
+            <h2 class="sectionTitle_aq4p">Regional Italian Cuisine Specialties</h2>
+            <div class="ingredientsList_ek3m">
+                <h3>Distinct Regional Characteristics</h3>
+                <div class="regionCard_hn4m">
+                    <h4>Northern Italian Culinary Heritage</h4>
+                    <p>Northern Italy showcases a rich culinary tradition heavily influenced by Alpine geography and proximity to Central Europe. The cuisine emphasizes butter, cream, and rice as primary ingredients, with risotto and polenta serving as staple carbohydrates. The Piedmont region is renowned for its truffles, hazelnuts, and sophisticated preparation methods. Lombardy contributes ossobuco and panettone to the Italian culinary canon, while Emilia-Romagna produces world-famous Parmigiano-Reggiano cheese and traditional balsamic vinegar. The cooking style reflects a more refined approach with emphasis on ingredient quality and precise technique.</p>
+                </div>
+
+                <div class="regionCard_hn4m">
+                    <h4>Central Italian Traditions</h4>
+                    <p>Central Italy, encompassing Tuscany, Umbria, and Lazio, represents the heart of Italian culinary authenticity. This region emphasizes simplicity, allowing high-quality ingredients to shine without excessive manipulation. Tuscan cuisine celebrates olive oil, beans, and grilled meats, particularly bistecca alla fiorentina. The region's wine culture significantly influences cooking methods and flavor development. Umbrian specialties include black truffles and wild mushrooms, while Roman cuisine brings forth iconic dishes like cacio e pepe and carbonara, which showcase the art of combining simple ingredients into complex flavor profiles.</p>
+                </div>
+
+                <div class="regionCard_hn4m">
+                    <h4>Southern Italian & Sicilian Cuisine</h4>
+                    <p>Southern Italy and Sicily present a unique culinary landscape shaped by Mediterranean climate, Arab influences, and historical trade routes. The cuisine emphasizes fresh vegetables, seafood, and bold spice combinations. Sicily's position as a crossroads of civilizations resulted in distinctive dishes incorporating Arabic, Norman, and Spanish influences. Tomatoes, eggplants, and citrus fruits feature prominently in Southern Italian cooking. The region's pasta traditions differ significantly from the North, with dried pasta predominating and sauces often featuring seafood, vegetables, and aromatic herbs. The cooking style reflects a more rustic, vibrant approach celebrating local seasonal produce.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cooking Techniques Section -->
+        <section id="techniques">
+            <h2 class="sectionTitle_aq4p">Essential Italian Cooking Techniques</h2>
+            <div class="techniqueBlock_qs7m">
+                <h3>Fundamental Cooking Methods</h3>
+                <p><strong>Soffritto Foundation:</strong> The soffritto represents the aromatic base of countless Italian dishes, combining finely diced onions, celery, and carrots sautéed in olive oil until softened and fragrant. This foundational technique develops complex flavors through the Maillard reaction and caramelization of vegetable sugars. The proper execution of soffritto requires patience, appropriate heat control, and understanding how different vegetables contribute distinct flavor notes to the final dish.</p>
+                <p><strong>Mantecatura Technique:</strong> This sophisticated method involves tossing cooked pasta with sauce using rapid, controlled movements that allow the pasta to absorb sauce flavors while maintaining structural integrity. The technique requires understanding pasta water's starch content and how it emulsifies with fats and other sauce components. Proper mantecatura creates a cohesive dish where pasta and sauce become unified rather than remaining separate components.</p>
+                <p><strong>Slow Cooking & Braising:</strong> Italian cuisine extensively employs slow cooking methods that develop deep, complex flavors through extended heat exposure. Braising techniques involve searing meat to develop a flavorful crust, then cooking slowly in liquid at low temperatures. This method breaks down connective tissues, rendering them into gelatin that enriches the cooking liquid and creates luxurious sauce consistency.</p>
+            </div>
+
+            <div class="techniqueBlock_qs7m">
+                <h3>Advanced Preparation Methods</h3>
+                <p><strong>Emulsification Processes:</strong> Understanding how to create and maintain emulsions is crucial in Italian cooking. Sauces like carbonara and cacio e pepe rely on careful emulsification of fats with pasta water starch to create silky, cohesive sauces. Temperature control and timing are critical to prevent separation or curdling of ingredients.</p>
+                <p><strong>Reduction & Concentration:</strong> Italian cooking frequently employs reduction techniques to concentrate flavors and create rich, glossy sauces. This method involves simmering liquids until water evaporates, intensifying remaining flavors and creating desired consistency. Understanding evaporation rates and flavor concentration helps achieve proper sauce texture and taste balance.</p>
+            </div>
+        </section>
+
+        <!-- Key Ingredients Section -->
+        <section id="ingredients">
+            <h2 class="sectionTitle_aq4p">Essential Italian Ingredients</h2>
+            <div class="ingredientsList_ek3m">
+                <h3>Core Ingredients in Italian Cooking</h3>
+                <ul>
+                    <li>Extra Virgin Olive Oil - Foundation of Italian cuisine</li>
+                    <li>San Marzano Tomatoes - Prized for sauce preparation</li>
+                    <li>Durum Wheat Semolina - Traditional pasta production</li>
+                    <li>Parmigiano-Reggiano Cheese - Aged hard cheese</li>
+                    <li>Fresh Basil - Aromatic herb essential to many dishes</li>
+                    <li>Garlic & Onions - Fundamental aromatic vegetables</li>
+                    <li>Balsamic Vinegar - Aged vinegar from Modena</li>
+                    <li>Arborio Rice - Short-grain rice for risotto</li>
+                    <li>Pancetta - Cured pork product for flavoring</li>
+                    <li>Fresh Mozzarella - Soft cheese for various applications</li>
+                    <li>Oregano & Thyme - Dried Mediterranean herbs</li>
+                    <li>Capers & Olives - Brined preserved ingredients</li>
+                </ul>
+            </div>
+
+            <div class="featureBox_ld9m">
+                <h4>Ingredient Quality Importance</h4>
+                <p>Italian cuisine's success fundamentally depends on ingredient quality rather than complex techniques. The philosophy emphasizes allowing superior ingredients to express their natural flavors without excessive manipulation. Sourcing authentic Italian products, understanding seasonal availability, and respecting ingredient characteristics form the foundation of authentic Italian cooking. This approach contrasts with cuisines that rely on complex preparation methods to create flavor complexity.</p>
+            </div>
+        </section>
+
+        <!-- Business History Section -->
+        <section id="history">
+            <h2 class="sectionTitle_aq4p">DecoriQHome Journey & Heritage</h2>
+            <div class="historySection_vb8k">
+                <h3 class="historyTitle_ck2m">Our Story & Mission</h3>
+                <p class="historyText_jx9p">DecoriQHome was established with a singular vision: to preserve and celebrate authentic Italian culinary traditions in an increasingly globalized world. Our founders recognized that genuine Italian cuisine was becoming diluted by commercialization and misrepresentation. We committed ourselves to documenting traditional methods, connecting with regional experts, and creating comprehensive resources that honor the cultural significance of Italian food heritage.</p>
+                <p class="historyText_jx9p">Since our inception, we have collaborated with Italian culinary historians, traditional cooks, and regional food organizations to ensure accuracy and authenticity in all our content. Our team has conducted extensive research into regional variations, historical cooking methods, and the cultural contexts that shaped Italian cuisine. We believe that understanding the "why" behind traditional techniques enriches the cooking experience and creates deeper appreciation for Italian culinary arts.</p>
+                <p class="historyText_jx9p">Our platform serves as a bridge between traditional Italian cooking knowledge and contemporary audiences seeking authentic culinary experiences. We emphasize the importance of respecting ingredient origins, understanding regional distinctions, and appreciating the cultural narratives embedded in traditional recipes. Through our comprehensive guides, detailed technique explanations, and historical context, we empower individuals to cook authentically and meaningfully engage with Italian culinary traditions.</p>
+            </div>
+
+            <div class="historySection_vb8k">
+                <h3 class="historyTitle_ck2m">Commitment to Authenticity</h3>
+                <p class="historyText_jx9p">Our commitment extends beyond recipe documentation to encompassing the philosophical foundations of Italian cooking. We recognize that Italian cuisine represents more than food preparation; it embodies family values, regional pride, seasonal awareness, and cultural continuity. Each recipe carries historical significance and reflects specific geographic, climatic, and cultural influences that shaped its development.</p>
+                <p class="historyText_jx9p">We actively work to combat culinary misinformation and commercialized distortions of Italian food traditions. Our educational initiatives focus on explaining why certain techniques matter, how regional ingredients influence flavor profiles, and how traditional methods achieve results that modern shortcuts cannot replicate. We believe that informed cooks make better decisions and create more authentic, satisfying culinary experiences.</p>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <h2 class="sectionTitle_aq4p">Community Reviews & Testimonials</h2>
+            <div class="reviewsContainer_wd4k">
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Marco Benedetti - Rome, Italy</div>
+                    <div class="stars_bx4m">★★★★★</div>
+                    <p class="reviewText_ks2l">"As someone who grew up in Rome, I was skeptical about online Italian cooking resources. DecoriQHome impressed me with its authentic approach and respect for traditional methods. The explanations of regional variations are particularly valuable. This platform genuinely understands Italian culinary culture."</p>
+                </div>
+
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Elena Rossi - Milan, Italy</div>
+                    <div class="stars_bx4m">★★★★★</div>
+                    <p class="reviewText_ks2l">"I've been cooking Italian food for thirty years, and I still learned new perspectives from DecoriQHome's content. The historical context and technical explanations demonstrate genuine expertise. This is the kind of resource I wish existed when I was learning to cook."</p>
+                </div>
+
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Sarah Mitchell - London, UK</div>
+                    <div class="stars_bx4m">★★★★☆</div>
+                    <p class="reviewText_ks2l">"As someone learning Italian cooking from abroad, DecoriQHome provides the cultural context that makes recipes meaningful. The detailed technique explanations help me understand not just what to do, but why it matters. Highly recommended for serious home cooks."</p>
+                </div>
+
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Giovanni Moretti - Florence, Italy</div>
+                    <div class="stars_bx4m">★★★★★</div>
+                    <p class="reviewText_ks2l">"DecoriQHome captures the essence of what makes Italian cooking special. The emphasis on ingredient quality, regional traditions, and proper technique aligns perfectly with how I was taught to cook. This platform honors our culinary heritage authentically."</p>
+                </div>
+
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Patricia Johnson - New York, USA</div>
+                    <div class="stars_bx4m">★★★★★</div>
+                    <p class="reviewText_ks2l">"I've tried numerous Italian cooking websites, but DecoriQHome stands out for its depth and authenticity. The content is well-researched, clearly explained, and genuinely helpful. I feel confident cooking Italian food after studying their resources."</p>
+                </div>
+
+                <div class="reviewCard_nt7m">
+                    <div class="reviewAuthor_gm3k">Lucia Ferraro - Naples, Italy</div>
+                    <div class="stars_bx4m">★★★★★</div>
+                    <p class="reviewText_ks2l">"As a professional chef, I appreciate DecoriQHome's commitment to authenticity and accuracy. The platform respects traditional methods while making them accessible to contemporary audiences. This is exactly the kind of resource the culinary world needs."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Content Block -->
+        <section class="descriptionBlock_hy7m">
+            <h2 class="sectionTitle_aq4p">Understanding Italian Culinary Philosophy</h2>
+            <p>Italian cooking philosophy fundamentally differs from many other culinary traditions in its emphasis on simplicity, ingredient quality, and respect for traditional methods. Rather than employing complex techniques to mask inferior ingredients or create artificial flavor complexity, Italian cuisine celebrates the natural characteristics of high-quality components. This philosophy reflects broader Italian cultural values emphasizing family, community, and the importance of shared meals in social life.</p>
+            <p>The concept of "cucina povera" or peasant cooking significantly influenced Italian culinary development. Historical economic constraints forced Italian cooks to create satisfying, flavorful dishes from limited, humble ingredients. This necessity fostered innovation and resourcefulness, resulting in dishes of remarkable depth and satisfaction. Many iconic Italian recipes originated from peasant traditions, later refined and celebrated as culinary masterpieces. Understanding this historical context enriches appreciation for traditional recipes and cooking methods.</p>
+            <p>Seasonality represents another cornerstone of Italian culinary philosophy. Traditional Italian cooking celebrates seasonal ingredient availability, with menus and recipes changing throughout the year. This approach ensures optimal flavor, nutritional value, and economic efficiency. Modern industrial food systems have diminished seasonality awareness, but authentic Italian cooking maintains this connection to natural cycles and local agricultural rhythms. <a href="#" class="readMore_qp7x" onclick="openModal('modal5'); return false;">Click here to continue</a> exploring how seasonality influences Italian menu planning and ingredient selection.</p>
+        </section>
+
+        <!-- Techniques Deep Dive -->
+        <section class="descriptionBlock_hy7m">
+            <h2 class="sectionTitle_aq4p">Mastering Traditional Italian Cooking Methods</h2>
+            <p>Achieving authentic Italian cooking results requires understanding and respecting traditional methods that have been refined over centuries. Modern cooking equipment and techniques, while convenient, often fail to replicate results achieved through traditional approaches. The difference lies not merely in equipment but in understanding how traditional methods develop flavors, textures, and characteristics that define authentic Italian dishes.</p>
+            <p>Hand-made pasta, for example, differs fundamentally from machine-produced alternatives in texture, flavor absorption capacity, and overall eating experience. The process of hand-rolling pasta develops gluten networks differently than mechanical extrusion, resulting in superior sauce adherence and mouthfeel. Similarly, slow-cooked ragùs develop complex flavor profiles through extended cooking times that concentrated, high-heat methods cannot achieve. These differences may seem subtle to untrained palates but represent the distinction between authentic Italian cooking and mere imitation.</p>
+            <p>Understanding ingredient interactions and flavor development processes enables cooks to make informed decisions about technique modifications while maintaining authenticity. For instance, knowing why soffritto requires gentle heat and patient cooking helps cooks understand that rushing this step compromises the entire dish's foundation. This knowledge-based approach to cooking empowers individuals to cook authentically even when exact traditional conditions are unavailable, by understanding the principles underlying traditional methods.</p>
+        </section>
+
+        <!-- Regional Exploration -->
+        <section class="descriptionBlock_hy7m">
+            <h2 class="sectionTitle_aq4p">Exploring Italy's Diverse Culinary Regions</h2>
+            <p>Italy's geographic diversity creates distinct regional cuisines that reflect local climate, agriculture, history, and cultural influences. Understanding these regional variations is essential for appreciating Italian culinary complexity and avoiding the mistake of treating "Italian food" as monolithic. Each region developed unique dishes, techniques, and ingredient preferences based on specific environmental and historical circumstances.</p>
+            <p>The Alps influence Northern Italian cuisine through cooler climate agriculture and proximity to Central European culinary traditions. This region emphasizes butter, cream, and preserved meats, with risotto and polenta serving as primary carbohydrates. The Mediterranean climate of Southern Italy and Sicily enables cultivation of tomatoes, citrus fruits, and olives, creating distinctly different flavor profiles and cooking approaches. Central Italy's rolling hills and temperate climate support olive cultivation and pastoral traditions, influencing the region's emphasis on grilled meats and simple preparations.</p>
+            <p>Historical factors also shaped regional cuisines significantly. Sicily's position as a Mediterranean crossroads resulted in Arab, Norman, and Spanish influences creating unique flavor combinations and techniques. The Venetian Republic's maritime dominance influenced coastal regions' seafood traditions and spice usage. Papal influence shaped Roman cuisine, while merchant republics like Genoa developed distinctive culinary traditions reflecting their commercial networks. <a href="#" class="readMore_qp7x" onclick="openModal('modal6'); return false;">Click here to continue</a> learning about specific regional specialties and their historical origins.</p>
+        </section>
+
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contentWrapper_zx2m" id="contact">
+        <h2 class="sectionTitle_aq4p">Get In Touch With DecoriQHome</h2>
+        <div class="gridLayout_mp9k">
+            <div class="card_tn4x">
+                <div class="cardContent_ws3r">
+                    <h3 class="cardTitle_ek8m">Contact Information</h3>
+                    <p class="cardText_jm5n"><strong>Email:</strong> info@decoriqhome.com</p>
+                    <p class="cardText_jm5n"><strong>Phone:</strong> <a href="tel:+39061234567" class="phoneLink_dn5m">+39 06 1234 567</a></p>
+                    <p class="cardText_jm5n"><strong>Address:</strong> Via Culinary Arts 42, Rome, Italy 00100</p>
+                    <p class="cardText_jm5n"><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM CET</p>
+                </div>
+            </div>
+
+            <div class="card_tn4x">
+                <div class="cardContent_ws3r">
+                    <h3 class="cardTitle_ek8m">Support Services</h3>
+                    <p class="cardText_jm5n">We provide comprehensive support for culinary inquiries, technique clarifications, and content recommendations. Our team responds to inquiries within 24 business hours.</p>
+                    <p class="cardText_jm5n"><strong>Support Email:</strong> support@decoriqhome.com</p>
+                    <p class="cardText_jm5n"><strong>Alternative Phone:</strong> <a href="tel:+39061234568" class="phoneLink_dn5m">+39 06 1234 568</a></p>
+                </div>
+            </div>
+
+            <div class="card_tn4x">
+                <div class="cardContent_ws3r">
+                    <h3 class="cardTitle_ek8m">Partnerships & Collaborations</h3>
+                    <p class="cardText_jm5n">We actively seek partnerships with culinary organizations, Italian food producers, and educational institutions. Contact our partnership team for collaboration opportunities.</p>
+                    <p class="cardText_jm5n"><strong>Partnerships Email:</strong> partnerships@decoriqhome.com</p>
+                    <p class="cardText_jm5n"><strong>Partnership Phone:</strong> <a href="tel:+39061234569" class="phoneLink_dn5m">+39 06 1234 569</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footerSection_qm8p">
+        <div class="footerContent_rx3k">
+            <div class="footerBlock_ym7n">
+                <div class="footerTitle_zp5k">About DecoriQHome</div>
+                <p class="footerText_aq2m">DecoriQHome is dedicated to preserving and celebrating authentic Italian culinary traditions. We provide comprehensive resources for understanding traditional cooking methods, regional specialties, and the cultural significance of Italian food heritage.</p>
+            </div>
+
+            <div class="footerBlock_ym7n">
+                <div class="footerTitle_zp5k">Quick Links</div>
+                <p class="footerText_aq2m">
+                    <a href="#traditions" class="footerLink_jk4m">Traditions</a><br>
+                    <a href="#regions" class="footerLink_jk4m">Regional Cuisine</a><br>
+                    <a href="#techniques" class="footerLink_jk4m">Cooking Techniques</a><br>
+                    <a href="#ingredients" class="footerLink_jk4m">Essential Ingredients</a><br>
+                    <a href="#history" class="footerLink_jk4m">Our History</a>
+                </p>
+            </div>
+
+            <div class="footerBlock_ym7n">
+                <div class="footerTitle_zp5k">Legal & Policies</div>
+                <p class="footerText_aq2m">
+                    <a href="#" class="footerLink_jk4m" onclick="openModal('privacyModal'); return false;">Privacy Policy</a><br>
+                    <a href="#" class="footerLink_jk4m" onclick="openModal('termsModal'); return false;">Terms of Service</a><br>
+                    <a href="#" class="footerLink_jk4m" onclick="openModal('cookieModal'); return false;">Cookie Policy</a>
+                </p>
+            </div>
+
+            <div class="footerBlock_ym7n">
+                <div class="footerTitle_zp5k">Contact Us</div>
+                <p class="footerText_aq2m">
+                    Email: <a href="mailto:info@decoriqhome.com" class="footerLink_jk4m">info@decoriqhome.com</a><br>
+                    Phone: <a href="tel:+39061234567" class="footerLink_jk4m">+39 06 1234 567</a><br>
+                    Address: Via Culinary Arts 42, Rome, Italy
+                </p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p class="footerText_aq2m">&copy; 2024 DecoriQHome. All rights reserved. Dedicated to preserving authentic Italian culinary heritage.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal1')">&times;</span>
+            <h2 class="modalTitle_aq5m">Our Culinary Philosophy</h2>
+            <p class="modalText_jm2p">DecoriQHome's approach to Italian cuisine emphasizes authenticity, respect for tradition, and understanding the cultural contexts that shaped Italian food heritage. We believe that cooking authentically requires more than following recipes; it demands understanding the principles, techniques, and cultural values embedded in traditional methods.</p>
+            <p class="modalText_jm2p">Our philosophy recognizes that Italian cuisine represents a living tradition that continues evolving while maintaining connection to historical roots. We celebrate both traditional methods and thoughtful innovations that respect culinary principles. We emphasize ingredient quality, seasonal awareness, and the importance of technique mastery in achieving authentic results.</p>
+            <p class="modalText_jm2p">Through our comprehensive resources, we aim to empower individuals to cook authentically, understand regional variations, and appreciate the cultural significance of Italian food traditions. We believe that informed cooks make better decisions and create more satisfying culinary experiences that honor Italian culinary heritage.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="modalTitle_aq5m">Pasta Preparation Methods</h2>
+            <p class="modalText_jm2p">Traditional pasta making begins with selecting appropriate flour types. Durum wheat semolina, with its high protein content and golden color, serves as the foundation for dried pasta production. The protein content, typically 12-14%, develops gluten networks essential for pasta structure and texture development.</p>
+            <p class="modalText_jm2p">Fresh pasta preparation differs significantly from dried pasta production. Fresh pasta typically uses softer wheat flour combined with eggs, creating a different texture and cooking characteristic. The hydration ratio, flour type, and egg content all influence final pasta characteristics. Hand-rolling techniques develop gluten networks differently than mechanical extrusion, affecting sauce absorption and mouthfeel.</p>
+            <p class="modalText_jm2p">Proper pasta cooking requires understanding starch gelatinization and gluten development. Cooking pasta in abundant, salted water allows starch to hydrate and gelatinize while salt seasons the pasta throughout. The al dente texture represents the optimal balance between exterior softness and interior firmness, achieved through precise timing and understanding individual pasta shapes' cooking requirements.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="modalTitle_aq5m">Risotto & Rice Traditions</h2>
+            <p class="modalText_jm2p">Risotto represents one of Northern Italy's most sophisticated culinary achievements, requiring precise technique and constant attention. The method involves gradually incorporating warm broth into rice while stirring continuously, allowing starch to release gradually and create the characteristic creamy consistency. This technique cannot be rushed or simplified without compromising results.</p>
+            <p class="modalText_jm2p">Arborio rice, with its high starch content and ability to maintain structural integrity during cooking, serves as the traditional choice for risotto preparation. The rice grains' size and starch composition enable them to absorb liquid gradually while releasing starch that creates the creamy sauce. Other rice varieties like Carnaroli and Vialone Nano also work well, each contributing slightly different characteristics.</p>
+            <p class="modalText_jm2p">The risotto technique develops through several stages: toasting rice in fat to seal the exterior, gradually incorporating broth while stirring, and finishing with butter and cheese to enhance creaminess. Each stage serves specific purposes in developing flavor and texture. The final consistency should flow slightly on the plate, indicating proper starch release and liquid absorption. Risotto exemplifies how technique mastery creates superior results that cannot be achieved through shortcuts.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal4')">&times;</span>
+            <h2 class="modalTitle_aq5m">Traditional Sauce Crafting</h2>
+            <p class="modalText_jm2p">Italian sauces range from simple preparations highlighting single ingredients to complex ragùs requiring hours of slow cooking. Each sauce carries regional significance and specific flavor profiles that complement particular pasta shapes and dishes. Understanding sauce characteristics enables proper pairing with pasta shapes and dishes.</p>
+            <p class="modalText_jm2p">Tomato-based sauces form the foundation of Southern Italian cooking. San Marzano tomatoes, prized for their low acidity and sweet flavor, serve as the traditional choice for sauce preparation. Simple tomato sauce requires only tomatoes, garlic, olive oil, and salt, allowing ingredient quality to shine. More complex preparations incorporate soffritto, herbs, and extended cooking times to develop deeper flavors.</p>
+            <p class="modalText_jm2p">Meat ragùs, particularly Bolognese from Emilia-Romagna, represent the pinnacle of sauce complexity. These preparations involve browning ground meat, incorporating soffritto and tomato paste, then simmering for hours until flavors meld and intensify. The extended cooking time allows collagen to convert to gelatin, creating rich, luxurious sauce consistency. Proper ragù preparation cannot be rushed; the slow cooking process is essential to achieving authentic results.</p>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal5')">&times;</span>
+            <h2 class="modalTitle_aq5m">Seasonality in Italian Cooking</h2>
+            <p class="modalText_jm2p">Seasonality represents a fundamental principle of authentic Italian cooking, reflecting both practical and philosophical considerations. Seasonal ingredients reach peak flavor, nutritional value, and affordability during their natural growing periods. Traditional Italian menus change throughout the year, celebrating seasonal availability and respecting agricultural cycles.</p>
+            <p class="modalText_jm2p">Spring brings fresh vegetables like asparagus, artichokes, and peas, inspiring light preparations that highlight their delicate flavors. Summer celebrates tomatoes, zucchini, and eggplants, enabling fresh, vibrant dishes. Autumn introduces mushrooms, truffles, and game meats, inspiring richer preparations. Winter features preserved vegetables, dried legumes, and hearty preparations that sustained communities through colder months.</p>
+            <p class="modalText_jm2p">Understanding seasonality enables cooks to make authentic ingredient choices and appreciate why certain dishes appear during specific seasons. This knowledge connects cooking to natural cycles and agricultural realities, enriching the culinary experience beyond mere recipe execution. Seasonal cooking also supports local agriculture and reduces environmental impact associated with transporting out-of-season ingredients globally.</p>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('modal6')">&times;</span>
+            <h2 class="modalTitle_aq5m">Regional Specialties & Origins</h2>
+            <p class="modalText_jm2p">Each Italian region developed distinctive culinary traditions reflecting specific geographic, climatic, historical, and cultural circumstances. Understanding these regional variations prevents treating Italian cuisine as monolithic and enables appreciation for culinary diversity within Italian food traditions.</p>
+            <p class="modalText_jm2p">Piedmont, in Northern Italy, developed sophisticated culinary traditions emphasizing truffles, hazelnuts, and refined preparation methods. The region's proximity to France influenced cooking styles, while Alpine geography shaped ingredient availability. Emilia-Romagna, known as Italy's culinary heartland, produced Parmigiano-Reggiano cheese, balsamic vinegar, and traditional pasta shapes like tortellini and lasagna. The region's agricultural richness enabled development of complex, ingredient-intensive dishes.</p>
+            <p class="modalText_jm2p">Sicily's unique position as a Mediterranean crossroads resulted in distinctive cuisine incorporating Arab, Norman, and Spanish influences. The island's climate enables cultivation of citrus fruits, creating flavor profiles distinct from mainland Italian cuisine. Coastal regions throughout Italy developed seafood traditions reflecting maritime access and historical fishing practices. Understanding these regional contexts enriches appreciation for traditional recipes and cooking methods.</p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('privacyModal')">&times;</span>
+            <h2 class="modalTitle_aq5m">Privacy Policy</h2>
+            <p class="modalText_jm2p"><strong>Last Updated: 2024</strong></p>
+            <p class="modalText_jm2p">DecoriQHome ("we," "us," "our," or "Company") operates the decoriqhome.com website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
+            <p class="modalText_jm2p"><strong>Information Collection and Use:</strong> We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+            <p class="modalText_jm2p"><strong>Types of Data Collected:</strong> Personal Data may include, but is not limited to: Email address, First name and last name, Phone number, Address, State, Province, ZIP/Postal code, City, Cookies and Usage Data.</p>
+            <p class="modalText_jm2p"><strong>Usage Data:</strong> We may also collect information on how the Service is accessed and used ("Usage Data"). This may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages you visit, the time and date of your visit, the time spent on those pages, and other diagnostic data.</p>
+            <p class="modalText_jm2p"><strong>Cookies:</strong> We use cookies and similar tracking technologies to track activity on our Service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+            <p class="modalText_jm2p"><strong>Security of Data:</strong> The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+            <p class="modalText_jm2p"><strong>Changes to This Privacy Policy:</strong> We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.</p>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('termsModal')">&times;</span>
+            <h2 class="modalTitle_aq5m">Terms of Service</h2>
+            <p class="modalText_jm2p"><strong>Last Updated: 2024</strong></p>
+            <p class="modalText_jm2p"><strong>1. Agreement to Terms:</strong> By accessing and using the DecoriQHome website (decoriqhome.com), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+            <p class="modalText_jm2p"><strong>2. Use License:</strong> Permission is granted to temporarily download one copy of the materials (information or software) on DecoriQHome's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to decompile or reverse engineer any software contained on the website; remove any copyright or other proprietary notations from the materials; transfer the materials to another person or "mirror" the materials on any other server.</p>
+            <p class="modalText_jm2p"><strong>3. Disclaimer:</strong> The materials on DecoriQHome's website are provided on an 'as is' basis. DecoriQHome makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            <p class="modalText_jm2p"><strong>4. Limitations:</strong> In no event shall DecoriQHome or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on DecoriQHome's website, even if DecoriQHome or an authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+            <p class="modalText_jm2p"><strong>5. Accuracy of Materials:</strong> The materials appearing on DecoriQHome's website could include technical, typographical, or photographic errors. DecoriQHome does not warrant that any of the materials on its website are accurate, complete, or current. DecoriQHome may make changes to the materials contained on its website at any time without notice.</p>
+            <p class="modalText_jm2p"><strong>6. Links:</strong> DecoriQHome has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by DecoriQHome of the site. Use of any such linked website is at the user's own risk.</p>
+            <p class="modalText_jm2p"><strong>7. Modifications:</strong> DecoriQHome may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
+            <p class="modalText_jm2p"><strong>8. Governing Law:</strong> These terms and conditions are governed by and construed in accordance with the laws of Italy, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+        </div>
+    </div>
+
+    <!-- Cookie Policy Modal -->
+    <div id="cookieModal" class="modal_tz9k">
+        <div class="modalContent_vx3m">
+            <span class="closeBtn_ky8m" onclick="closeModal('cookieModal')">&times;</span>
+            <h2 class="modalTitle_aq5m">Cookie Policy</h2>
+            <p class="modalText_jm2p"><strong>Last Updated: 2024</strong></p>
+            <p class="modalText_jm2p">DecoriQHome uses cookies on the decoriqhome.com website. By using the website, you consent to the use of cookies in accordance with this Cookie Policy.</p>
+            <p class="modalText_jm2p"><strong>What are Cookies?</strong> Cookies are small text files that are stored on your device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site.</p>
+            <p class="modalText_jm2p"><strong>How We Use Cookies:</strong> We use cookies for the following purposes: To enable certain functions of the website, To provide analytics, To store your preferences, To enable social media features, To display personalized content.</p>
+            <p class="modalText_jm2p"><strong>Types of Cookies We Use:</strong> Session Cookies: These are temporary cookies that expire once you close your browser. Persistent Cookies: These cookies remain on your device for a set period or until you delete them manually. Third-party Cookies: These are set by third-party services we use, such as analytics providers.</p>
+            <p class="modalText_jm2p"><strong>Managing Cookies:</strong> You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a website and some services and functionalities may not work.</p>
+            <p class="modalText_jm2p"><strong>Contact Us:</strong> If you have any questions about our Cookie Policy, please contact us at info@decoriqhome.com.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal_tz9k')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && !href.includes('modal')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+	
+	<a href="/" alt="stats counter free" target="_blank" >
+<img  src="https://sstatic1.histats.com/0.gif?4977134&101" alt="stats counter free" border="0">
+
+</body>
+</html>
